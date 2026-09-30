@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2ahhq5gbswxh"]
 
 [ext_resource type="Script" uid="uid://bkxvjddtgamsw" path="res://scene/entity/player.gd" id="1_25px6"]
-[ext_resource type="AudioStream" uid="uid://bdm6rpb4queo3" path="res://asset/sound/freesound_community-footsteps-in-thin-snow-46199.mp3" id="2_n2tfw"]
+[ext_resource type="AudioStream" uid="uid://bdm6rpb4queo3" path="res://asset/sound/footsteps_grass.mp3" id="2_n2tfw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xj47t"]
 
