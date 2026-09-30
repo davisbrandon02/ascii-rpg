@@ -11,6 +11,7 @@ extends CharacterBody3D
 @export var crouching_camera_height: float = 0.5
 
 @onready var camera: Camera3D = $Camera3D
+@onready var footstep_sound: AudioStreamPlayer3D = %FootstepSoundEffect
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_crouching: bool = false
@@ -55,6 +56,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0.0, speed)
 
 	move_and_slide()
+	_update_footsteps()
+
+func _update_footsteps() -> void:
+	var is_walking: bool = is_on_floor() and Vector2(velocity.x, velocity.z).length() > 0.1
+	if is_walking and not footstep_sound.playing:
+		footstep_sound.play()
+	elif not is_walking and footstep_sound.playing:
+		footstep_sound.stop()
 
 func _set_crouching(crouching: bool) -> void:
 	is_crouching = crouching

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2ahhq5gbswxh"]
 
 [ext_resource type="Script" uid="uid://bkxvjddtgamsw" path="res://scene/entity/player.gd" id="1_25px6"]
+[ext_resource type="AudioStream" uid="uid://bdm6rpb4queo3" path="res://asset/sound/freesound_community-footsteps-in-thin-snow-46199.mp3" id="2_n2tfw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xj47t"]
 
@@ -19,3 +20,12 @@ shape = SubResource("CapsuleShape3D_player")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1348027078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0000001, 0)
 current = true
+
+[node name="AudioStreams" type="Node3D" parent="." unique_id=1288086544]
+
+[node name="FootstepSoundEffect" type="AudioStreamPlayer3D" parent="AudioStreams" unique_id=430881264]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.77409506, 0)
+stream = ExtResource("2_n2tfw")
+volume_db = -10.0
+pitch_scale = 0.8

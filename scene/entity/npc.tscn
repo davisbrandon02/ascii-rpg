@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cjgtk5p23m4w6"]
+
+[ext_resource type="Script" uid="uid://dbnrexk0kpbje" path="res://scene/entity/npc.gd" id="1_g6ei4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wj5hs"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wj5hs"]
+
+[node name="NPC" type="CharacterBody3D" unique_id=1006532732]
+script = ExtResource("1_g6ei4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1420656716]
+shape = SubResource("CapsuleShape3D_wj5hs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=336464376]
+mesh = SubResource("CapsuleMesh_wj5hs")
+
+[node name="AI" type="Node3D" parent="." unique_id=1430220721]

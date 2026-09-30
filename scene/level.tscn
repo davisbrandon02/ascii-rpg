@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b3nt2ixtq0phf" path="res://asset/model/tree.tscn" id="3_ismto"]
 [ext_resource type="Texture2D" uid="uid://buj6xnpqb82go" path="res://import/env/bark.png" id="4_u2b8d"]
 [ext_resource type="PackedScene" uid="uid://d2ahhq5gbswxh" path="res://scene/entity/player.tscn" id="6_ismto"]
+[ext_resource type="PackedScene" uid="uid://cjgtk5p23m4w6" path="res://scene/entity/npc.tscn" id="7_bddx0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhomj"]
 resource_name = "Material.064"
@@ -1952,3 +1953,6 @@ mesh = SubResource("ArrayMesh_dhhev")
 
 [node name="Player" parent="." unique_id=876200602 instance=ExtResource("6_ismto")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9300299, 1.9876813, 50)
+
+[node name="NPC" parent="." unique_id=1006532732 instance=ExtResource("7_bddx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99999905, 0)
