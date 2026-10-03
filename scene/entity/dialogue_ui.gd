@@ -2,6 +2,7 @@ class_name DialogueUI
 extends Control
 
 @export var characters_per_second: float = 40.0
+@export var scroll_wheel_step: float = 40.0
 
 # Template button that gets duplicated for each response
 @onready var sample_choice_button: Button = %DialogueResponseVboxContainer.get_node("SampleDialogueChoiceBtn")
@@ -25,16 +26,23 @@ func start_dialogue(new_dialogue_component: DialogueComponent, finished_callback
 	is_open = true
 	visible = true
 
+	_update_speaker_name()
+	_start_lines()
+
+func _update_speaker_name():
 	# Display speaker name label if there is one and it isn't empty
 	var speaker_name: String = dialogue_component.speaker_name
 	%SpeakerNameLbl.text = speaker_name
 	%SpeakerNameLbl.visible = speaker_name != ""
 
-	_start_lines()
-
 func _start_lines():
 	dialogue = dialogue_component.current_dialogue
 	line_index = 0
+
+	# Some dialogue reveals who the speaker is, and it sticks from then on
+	if dialogue.reveal_speaker_name != "":
+		dialogue_component.set_speaker_name(dialogue.reveal_speaker_name)
+		_update_speaker_name()
 
 	# Empty dialogue skips straight to its callback/responses
 	if dialogue.current_dialogue.is_empty():
@@ -64,6 +72,16 @@ func _unhandled_input(event: InputEvent) -> void:
 				get_viewport().set_input_as_handled()
 				_select_response(response_index)
 				return
+
+	# Scroll wheel moves through long lines once they're done typing
+	# Mouse is captured, so the label never gets wheel events on its own
+	var is_typing: bool = typing_tween and typing_tween.is_running()
+	if event is InputEventMouseButton and event.pressed and not choosing_response and not is_typing:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP or event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			get_viewport().set_input_as_handled()
+			var direction: float = -1.0 if event.button_index == MOUSE_BUTTON_WHEEL_UP else 1.0
+			%DialogueTextLabel.get_v_scroll_bar().value += direction * scroll_wheel_step
+			return
 
 	if not event.is_action_pressed("advance_dialogue"):
 		return

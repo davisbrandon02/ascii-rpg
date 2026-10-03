@@ -1831,7 +1831,8 @@ metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
 
 [sub_resource type="Resource" id="Resource_ahd0t"]
 script = ExtResource("8_htqai")
-current_dialogue = Array[String](["This is the Church of Saint Asper, and I am Father Deitrich. I am the priest here.", "You have chosen an interesting time to come to this land.", "People everywhere are paranoid, many towns have closed off their gates. Some say entire villages have vanished..."])
+current_dialogue = Array[String](["This is the Church of Saint Asper, and I am Father Dietrich. I am the priest here.", "You have chosen an interesting time to come to this land.", "People everywhere are paranoid, many towns have closed off their gates. Some say entire villages have vanished..."])
+reveal_speaker_name = "Father Dietrich"
 metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
 
 [sub_resource type="Resource" id="Resource_v2yk5"]
