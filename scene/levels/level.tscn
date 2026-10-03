@@ -1820,7 +1820,25 @@ shadow_mesh = SubResource("ArrayMesh_e4isr")
 
 [sub_resource type="Resource" id="Resource_u28oc"]
 script = ExtResource("8_htqai")
-current_dialogue = Array[String](["Oh! Sorry, you startled me. Welcome to our humble church."])
+metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
+
+[sub_resource type="Resource" id="Resource_htqai"]
+script = ExtResource("8_htqai")
+current_dialogue = Array[String](["Do you see these two suns in the sky? I have been staring at them all day.", "The lords might cry loudly that this is natural, but this has never been seen before...", "I fear that none of us truly know what is coming."])
+responses = Array[String](["Let us hope not."])
+response_dialogue = Array[ExtResource("8_htqai")]([SubResource("Resource_u28oc")])
+metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
+
+[sub_resource type="Resource" id="Resource_ahd0t"]
+script = ExtResource("8_htqai")
+current_dialogue = Array[String](["This is the Church of Saint Asper, and I am Father Deitrich. I am the priest here.", "You have chosen an interesting time to come to this land.", "People everywhere are paranoid, many towns have closed off their gates. Some say entire villages have vanished..."])
+metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
+
+[sub_resource type="Resource" id="Resource_v2yk5"]
+script = ExtResource("8_htqai")
+current_dialogue = Array[String](["Oh! Sorry, you startled me. Welcome to our humble church.", "If you are planning on going into town, I would suggest you turn back now."])
+responses = Array[String](["Thank you Father, why do you say that?", "What is the name of this church?"])
+response_dialogue = Array[ExtResource("8_htqai")]([SubResource("Resource_htqai"), SubResource("Resource_ahd0t")])
 metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
 
 [node name="Level" type="Node3D" unique_id=1449138097]
@@ -1943,12 +1961,13 @@ mesh = SubResource("ArrayMesh_dhhev")
 
 [node name="Player" parent="." unique_id=876200602 instance=ExtResource("6_qvpeq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9300299, 1.9876813, 50)
+standing_camera_height = 0.9
 
 [node name="FatherDietrich" parent="." unique_id=1006532732 instance=ExtResource("7_cq001")]
-transform = Transform3D(0.9999763, 0, -0.0068784356, 0, 1, 0, 0.0068784356, 0, 0.9999763, -24.371897, 2.1377783, -3.4442663)
+transform = Transform3D(-0.9999763, 0, 0.0068785227, 0, 1, 0, -0.0068785227, 0, -0.9999763, -24.371897, 2.1377783, -3.4442663)
 
 [node name="DialogueComponent" parent="FatherDietrich/Components" parent_id_path=PackedInt32Array(1006532732, 385131821) index="0" unique_id=1414084883]
 speaker_name = "Priest"
-current_dialogue = SubResource("Resource_u28oc")
+current_dialogue = SubResource("Resource_v2yk5")
 
 [editable path="FatherDietrich"]

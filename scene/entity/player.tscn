@@ -84,6 +84,43 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 48
 scroll_following = true
 
+[node name="DialogueResponseScrollContainer" type="ScrollContainer" parent="CanvasLayer/DialogueUI/MarginContainer/Panel" unique_id=207153173]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogueUI/MarginContainer/Panel/DialogueResponseScrollContainer" unique_id=1329406329]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DialogueTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogueUI/MarginContainer/Panel/DialogueResponseScrollContainer/MarginContainer" unique_id=227739147]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 48
+scroll_following = true
+
+[node name="DialogueResponseVboxContainer" type="VBoxContainer" parent="CanvasLayer/DialogueUI/MarginContainer/Panel/DialogueResponseScrollContainer/MarginContainer" unique_id=861320913]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SampleDialogueChoiceBtn" type="Button" parent="CanvasLayer/DialogueUI/MarginContainer/Panel/DialogueResponseScrollContainer/MarginContainer/DialogueResponseVboxContainer" unique_id=1634773849]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "1. Sample dialogue option"
+alignment = 0
+autowrap_mode = 2
+
 [node name="SpeakerNameLbl" type="RichTextLabel" parent="CanvasLayer/DialogueUI" unique_id=174231603]
 unique_name_in_owner = true
 layout_mode = 1

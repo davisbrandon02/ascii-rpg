@@ -12,6 +12,7 @@ extends CharacterBody3D
 
 @onready var camera: Camera3D = $Camera3D
 @onready var footstep_sound: AudioStreamPlayer3D = %FootstepSoundEffect
+@onready var interaction_raycast: RayCast3D = $InteractionRaycast
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_crouching: bool = false
@@ -28,6 +29,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause_menu"):
 		_toggle_mouse_capture()
 
+	if event.is_action_pressed("interact") and not DialogueUI.instance.is_open:
+		interact()
+
 func _toggle_mouse_capture() -> void:
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -38,13 +42,18 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_crouching:
+	# Freeze movement while talking, but still allow looking around
+	var in_dialogue: bool = DialogueUI.instance.is_open
+
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not is_crouching and not in_dialogue:
 		velocity.y = jump_velocity
 
-	if Input.is_action_just_pressed("crouch"):
+	if Input.is_action_just_pressed("crouch") and not in_dialogue:
 		_set_crouching(not is_crouching)
 
-	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var input_dir: Vector2 = Vector2.ZERO
+	if not in_dialogue:
+		input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
 	var speed: float = crouch_speed if is_crouching else walk_speed
 
@@ -57,6 +66,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	_update_footsteps()
+	%InteractLbl.visible = get_interactible() != null and not in_dialogue
 
 func _update_footsteps() -> void:
 	var is_walking: bool = is_on_floor() and Vector2(velocity.x, velocity.z).length() > 0.1
@@ -71,8 +81,14 @@ func _set_crouching(crouching: bool) -> void:
 
 func get_interactible():
 	# Get whatever interactible is colliding with raycast
-	pass
+	# Anything with an interact() method counts
+	var collider: Object = interaction_raycast.get_collider()
+	if collider and collider.has_method("interact"):
+		return collider
+	return null
 
 func interact():
 	# Activate whatever the interactible is
-	pass
+	var interactible = get_interactible()
+	if interactible:
+		interactible.interact(self)

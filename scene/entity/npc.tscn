@@ -762,6 +762,7 @@ _data = {
 }
 
 [node name="NPC" type="CharacterBody3D" unique_id=1006532732]
+collision_layer = 3
 script = ExtResource("1_g6ei4")
 
 [node name="Components" type="Node" parent="." unique_id=385131821]
@@ -775,7 +776,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5563812, 0)
 shape = SubResource("CapsuleShape3D_wj5hs")
 
 [node name="Mesh" type="Node3D" parent="." unique_id=1893117363]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(-0.25, 0, -2.1855694e-08, 0, 0.25, 0, 2.1855694e-08, 0, -0.25, 0, 0, 0)
 
 [node name="Armature" type="Node3D" parent="Mesh" unique_id=825735959]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6648014, 0)

@@ -13,7 +13,7 @@ func set_dialogue(dialogue: Dialogue, turn_toward_player: bool = true):
 	turns_toward_player_to_speak = turn_toward_player
 
 func select_response(response_index: int):
-	if current_dialogue.response_dialogue.has(response_index):
+	if response_index < current_dialogue.response_dialogue.size():
 		current_dialogue = current_dialogue.response_dialogue[response_index]
 	# Set new dialogue based on response index if appropriate.
 	# If there isn't one, don't do anything

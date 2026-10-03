@@ -4,7 +4,7 @@ extends Node
 # Stuff that fires when a dialogue ends
 
 func set_flag(flag_name: String, value: bool):
-	if Flags.has(flag_name):
-		Flags.flag_name = value
+	if flag_name in Flags:
+		Flags.set(flag_name, value)
 
 # Callbacks
