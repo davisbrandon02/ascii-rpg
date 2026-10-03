@@ -1,17 +1,17 @@
 [gd_scene format=4 uid="uid://thoedw610n1m"]
 
-[ext_resource type="PackedScene" uid="uid://blsswpoe6ytcc" path="res://asset/model/env/building/church_exterior.tscn" id="2_bddx0"]
-[ext_resource type="Texture2D" uid="uid://6spgn3rl7s33" path="res://import/env/textures/road_baked.png" id="2_ismto"]
-[ext_resource type="Texture2D" uid="uid://yei1ejif03eb" path="res://import/env/leaves.png" id="3_bddx0"]
-[ext_resource type="PackedScene" uid="uid://b3nt2ixtq0phf" path="res://asset/model/env/foliage/tree.tscn" id="3_ismto"]
-[ext_resource type="Texture2D" uid="uid://buj6xnpqb82go" path="res://import/env/bark.png" id="4_u2b8d"]
-[ext_resource type="PackedScene" uid="uid://d2ahhq5gbswxh" path="res://scene/entity/player.tscn" id="6_ismto"]
-[ext_resource type="PackedScene" uid="uid://cjgtk5p23m4w6" path="res://scene/entity/npc.tscn" id="7_bddx0"]
+[ext_resource type="PackedScene" uid="uid://b3nt2ixtq0phf" path="res://asset/model/env/foliage/tree.tscn" id="1_c6u5h"]
+[ext_resource type="PackedScene" uid="uid://blsswpoe6ytcc" path="res://asset/model/env/building/church_exterior.tscn" id="2_htqai"]
+[ext_resource type="Texture2D" uid="uid://6spgn3rl7s33" path="res://import/env/textures/road_baked.png" id="3_u28oc"]
+[ext_resource type="Texture2D" uid="uid://yei1ejif03eb" path="res://import/env/leaves.png" id="4_ahd0t"]
+[ext_resource type="Texture2D" uid="uid://buj6xnpqb82go" path="res://import/env/bark.png" id="5_v2yk5"]
+[ext_resource type="PackedScene" uid="uid://d2ahhq5gbswxh" path="res://scene/entity/player.tscn" id="6_qvpeq"]
+[ext_resource type="PackedScene" uid="uid://cjgtk5p23m4w6" path="res://scene/entity/npc.tscn" id="7_cq001"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjh3l"]
 resource_name = "Material"
 cull_mode = 2
-albedo_texture = ExtResource("2_ismto")
+albedo_texture = ExtResource("3_u28oc")
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
 
@@ -56,7 +56,7 @@ data = PackedVector3Array(0.6666, 0, -0.6669, 0.9999, 0, -1.0001, 0.9999, 0, -0.
 resource_name = "Material.004"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -64,7 +64,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exevs"]
 resource_name = "Material.005"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -72,7 +72,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.006"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -159,7 +159,7 @@ shadow_mesh = SubResource("ArrayMesh_qac1j")
 resource_name = "Material.007"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -167,7 +167,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ur3"]
 resource_name = "Material.008"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -175,7 +175,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.009"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -262,7 +262,7 @@ shadow_mesh = SubResource("ArrayMesh_u6hts")
 resource_name = "Material.010"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -270,7 +270,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eem4h"]
 resource_name = "Material.011"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -278,7 +278,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.012"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -365,7 +365,7 @@ shadow_mesh = SubResource("ArrayMesh_whd2x")
 resource_name = "Material.013"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -373,7 +373,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbxm5"]
 resource_name = "Material.014"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -381,7 +381,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.015"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -468,7 +468,7 @@ shadow_mesh = SubResource("ArrayMesh_tkrkq")
 resource_name = "Material.016"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -476,7 +476,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y288r"]
 resource_name = "Material.017"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -484,7 +484,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.018"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -571,7 +571,7 @@ shadow_mesh = SubResource("ArrayMesh_dmxko")
 resource_name = "Material.019"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -579,7 +579,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u4pr"]
 resource_name = "Material.020"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -587,7 +587,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.021"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -674,7 +674,7 @@ shadow_mesh = SubResource("ArrayMesh_320of")
 resource_name = "Material.022"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -682,7 +682,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hetfx"]
 resource_name = "Material.023"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -690,7 +690,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.024"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -777,7 +777,7 @@ shadow_mesh = SubResource("ArrayMesh_4rtdw")
 resource_name = "Material.025"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -785,7 +785,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i442l"]
 resource_name = "Material.026"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -793,7 +793,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.027"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -880,7 +880,7 @@ shadow_mesh = SubResource("ArrayMesh_yikds")
 resource_name = "Material.028"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -888,7 +888,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5qag"]
 resource_name = "Material.029"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -896,7 +896,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.030"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -983,7 +983,7 @@ shadow_mesh = SubResource("ArrayMesh_u45du")
 resource_name = "Material.037"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -991,7 +991,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hutq1"]
 resource_name = "Material.038"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -999,7 +999,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.039"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1086,7 +1086,7 @@ shadow_mesh = SubResource("ArrayMesh_ihabq")
 resource_name = "Material.040"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1094,7 +1094,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7mql"]
 resource_name = "Material.041"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1102,7 +1102,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.042"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1189,7 +1189,7 @@ shadow_mesh = SubResource("ArrayMesh_vk6ef")
 resource_name = "Material.043"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1197,7 +1197,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pglrh"]
 resource_name = "Material.044"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1205,7 +1205,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.045"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1292,7 +1292,7 @@ shadow_mesh = SubResource("ArrayMesh_hbfdy")
 resource_name = "Material.046"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1300,7 +1300,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wvseo"]
 resource_name = "Material.047"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1308,7 +1308,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.048"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1395,7 +1395,7 @@ shadow_mesh = SubResource("ArrayMesh_o4wu6")
 resource_name = "Material.049"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1403,7 +1403,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m5cxe"]
 resource_name = "Material.050"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1411,7 +1411,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.051"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1498,7 +1498,7 @@ shadow_mesh = SubResource("ArrayMesh_5hyu4")
 resource_name = "Material.052"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1506,7 +1506,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1px2"]
 resource_name = "Material.053"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1514,7 +1514,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.054"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1601,7 +1601,7 @@ shadow_mesh = SubResource("ArrayMesh_gqo7h")
 resource_name = "Material.055"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1609,7 +1609,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_be656"]
 resource_name = "Material.056"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1617,7 +1617,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.057"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1704,7 +1704,7 @@ shadow_mesh = SubResource("ArrayMesh_b2t14")
 resource_name = "Material.058"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1712,7 +1712,7 @@ metadata/_gltf_primary_texture_coord = 0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ksmt"]
 resource_name = "Material.059"
 cull_mode = 2
-albedo_texture = ExtResource("4_u2b8d")
+albedo_texture = ExtResource("5_v2yk5")
 roughness = 0.5
 metadata/_gltf_primary_texture_coord = 0
 
@@ -1720,7 +1720,7 @@ metadata/_gltf_primary_texture_coord = 0
 resource_name = "Material.060"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("3_bddx0")
+albedo_texture = ExtResource("4_ahd0t")
 roughness = 0.5
 texture_filter = 2
 metadata/_gltf_primary_texture_coord = 0
@@ -1806,29 +1806,37 @@ shadow_mesh = SubResource("ArrayMesh_e4isr")
 [node name="Level" type="Node3D" unique_id=1449138097]
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=534421192]
-transform = Transform3D(0.9945219, -0.025110668, 0.10146751, 0, 0.9707165, 0.24022806, -0.104528464, -0.23891205, 0.96539885, -12, 27.790672, 44.69087)
-light_color = Color(0.32026795, 0.16264217, 0.25470677, 1)
-light_energy = 13.609
-light_indirect_energy = 4.191
+transform = Transform3D(0.9945219, -0.025110668, 0.10146751, 0, 0.9707165, 0.24022806, -0.104528464, -0.23891205, 0.96539885, -29.027714, 54.91024, 60.51617)
+light_color = Color(0.8666667, 0.21960784, 0.16470589, 1)
+light_energy = 14.942
+light_indirect_energy = 5.524
+shadow_enabled = true
+directional_shadow_max_distance = 115.0
+
+[node name="Sun" type="DirectionalLight3D" parent="Sun" unique_id=509637917]
+transform = Transform3D(0.994522, -0.02511067, 0.1014675, 3.7252903e-09, 0.97071654, 0.24022803, -0.10452847, -0.23891206, 0.9653987, 169.72797, 40.28417, 119.61742)
+light_color = Color(0.69961256, 0.41748103, 0.5790356, 1)
+light_energy = 14.942
+light_indirect_energy = 5.524
 shadow_enabled = true
 directional_shadow_max_distance = 115.0
 
 [node name="env" type="Node3D" parent="." unique_id=954542655]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
-[node name="Tree2" parent="env" unique_id=875125895 instance=ExtResource("3_ismto")]
+[node name="Tree2" parent="env" unique_id=875125895 instance=ExtResource("1_c6u5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46569443, 0.43936396, -3.8)
 
-[node name="Tree3" parent="env" unique_id=1088065126 instance=ExtResource("3_ismto")]
+[node name="Tree3" parent="env" unique_id=1088065126 instance=ExtResource("1_c6u5h")]
 transform = Transform3D(0.9791582, 0, -0.20309897, 0, 1, 0, 0.20309897, 0, 0.9791582, 0.28768244, 0.43936396, -5.472118)
 
-[node name="Tree4" parent="env" unique_id=2088962517 instance=ExtResource("3_ismto")]
+[node name="Tree4" parent="env" unique_id=2088962517 instance=ExtResource("1_c6u5h")]
 transform = Transform3D(0.452198, 0, -0.89191765, 0, 1, 0, 0.89191765, 0, 0.452198, 0.71828836, 0.43936396, -4.9423504)
 
-[node name="Tree" parent="env" unique_id=1123874571 instance=ExtResource("3_ismto")]
+[node name="Tree" parent="env" unique_id=1123874571 instance=ExtResource("1_c6u5h")]
 transform = Transform3D(0.9930113, 0, 0.11801954, 0, 1, 0, -0.11801954, 0, 0.9930113, -2.7, 0.44218215, -1.9)
 
-[node name="ChurchExterior" parent="env" unique_id=1702162910 instance=ExtResource("2_bddx0")]
+[node name="ChurchExterior" parent="env" unique_id=1702162910 instance=ExtResource("2_htqai")]
 transform = Transform3D(0.2880009, 0, 0, 0, 0.2880009, 0, 0, 0, 0.2880009, -3.2834527, 0.32820088, -0.92458785)
 
 [node name="EnvBase" type="StaticBody3D" parent="env" unique_id=1425394114]
@@ -1910,8 +1918,8 @@ mesh = SubResource("ArrayMesh_8738o")
 transform = Transform3D(0.278279, 0, 0, 0, 0, 0.278279, 0, -0.278279, 0, -1.7165246, 0.6514246, -3.153102)
 mesh = SubResource("ArrayMesh_dhhev")
 
-[node name="Player" parent="." unique_id=876200602 instance=ExtResource("6_ismto")]
+[node name="Player" parent="." unique_id=876200602 instance=ExtResource("6_qvpeq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9300299, 1.9876813, 50)
 
-[node name="NPC" parent="." unique_id=1006532732 instance=ExtResource("7_bddx0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99999905, 0)
+[node name="NPC" parent="." unique_id=1006532732 instance=ExtResource("7_cq001")]
+transform = Transform3D(0.9999763, 0, -0.0068784356, 0, 1, 0, 0.0068784356, 0, 0.9999763, -24.371897, 2.1377783, -6.114808)

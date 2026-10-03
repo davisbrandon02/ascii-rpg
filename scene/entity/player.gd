@@ -7,7 +7,7 @@ extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.003
 @export var pitch_limit_deg: float = 89.0
 
-@export var standing_camera_height: float = 1.0
+@export var standing_camera_height: float = .8
 @export var crouching_camera_height: float = 0.5
 
 @onready var camera: Camera3D = $Camera3D
@@ -68,3 +68,11 @@ func _update_footsteps() -> void:
 func _set_crouching(crouching: bool) -> void:
 	is_crouching = crouching
 	camera.position.y = crouching_camera_height if crouching else standing_camera_height
+
+func get_interactible():
+	# Get whatever interactible is colliding with raycast
+	pass
+
+func interact():
+	# Activate whatever the interactible is
+	pass
