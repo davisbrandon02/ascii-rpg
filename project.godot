@@ -75,4 +75,4 @@ pause_menu={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method.mobile="forward_plus"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.33213586, 0.3321359, 0.3321359, 1)

@@ -7,6 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://buj6xnpqb82go" path="res://import/env/bark.png" id="5_v2yk5"]
 [ext_resource type="PackedScene" uid="uid://d2ahhq5gbswxh" path="res://scene/entity/player.tscn" id="6_qvpeq"]
 [ext_resource type="PackedScene" uid="uid://cjgtk5p23m4w6" path="res://scene/entity/npc.tscn" id="7_cq001"]
+[ext_resource type="Script" uid="uid://b1d2o7d8dp7m8" path="res://script/Dialogue.gd" id="8_htqai"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_htqai"]
+sky_top_color = Color(0.6996383, 0.0009506786, 0.79390717, 1)
+sky_horizon_color = Color(0.54132336, 0.35890144, 0.5481406, 1)
+ground_horizon_color = Color(0.54132336, 0.35890144, 0.5481406, 1)
+
+[sub_resource type="Sky" id="Sky_u28oc"]
+sky_material = SubResource("ProceduralSkyMaterial_htqai")
+
+[sub_resource type="Environment" id="Environment_ahd0t"]
+background_mode = 2
+sky = SubResource("Sky_u28oc")
+ssao_enabled = true
+sdfgi_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjh3l"]
 resource_name = "Material"
@@ -1803,7 +1818,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e4isr")
 
+[sub_resource type="Resource" id="Resource_u28oc"]
+script = ExtResource("8_htqai")
+current_dialogue = Array[String](["Oh! Sorry, you startled me. Welcome to our humble church."])
+metadata/_custom_type_script = "uid://b1d2o7d8dp7m8"
+
 [node name="Level" type="Node3D" unique_id=1449138097]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=348368936]
+environment = SubResource("Environment_ahd0t")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=534421192]
 transform = Transform3D(0.9945219, -0.025110668, 0.10146751, 0, 0.9707165, 0.24022806, -0.104528464, -0.23891205, 0.96539885, -29.027714, 54.91024, 60.51617)
@@ -1921,5 +1944,11 @@ mesh = SubResource("ArrayMesh_dhhev")
 [node name="Player" parent="." unique_id=876200602 instance=ExtResource("6_qvpeq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9300299, 1.9876813, 50)
 
-[node name="NPC" parent="." unique_id=1006532732 instance=ExtResource("7_cq001")]
-transform = Transform3D(0.9999763, 0, -0.0068784356, 0, 1, 0, 0.0068784356, 0, 0.9999763, -24.371897, 2.1377783, -6.114808)
+[node name="FatherDietrich" parent="." unique_id=1006532732 instance=ExtResource("7_cq001")]
+transform = Transform3D(0.9999763, 0, -0.0068784356, 0, 1, 0, 0.0068784356, 0, 0.9999763, -24.371897, 2.1377783, -3.4442663)
+
+[node name="DialogueComponent" parent="FatherDietrich/Components" parent_id_path=PackedInt32Array(1006532732, 385131821) index="0" unique_id=1414084883]
+speaker_name = "Priest"
+current_dialogue = SubResource("Resource_u28oc")
+
+[editable path="FatherDietrich"]
