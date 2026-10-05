@@ -22,6 +22,8 @@ background_mode = 2
 sky = SubResource("Sky_u28oc")
 ssao_enabled = true
 sdfgi_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.5873244, 0.4108548, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjh3l"]
 resource_name = "Material"
@@ -1850,7 +1852,7 @@ environment = SubResource("Environment_ahd0t")
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=534421192]
 transform = Transform3D(0.9945219, -0.025110668, 0.10146751, 0, 0.9707165, 0.24022806, -0.104528464, -0.23891205, 0.96539885, -29.027714, 54.91024, 60.51617)
 light_color = Color(0.8666667, 0.21960784, 0.16470589, 1)
-light_energy = 14.942
+light_energy = 1.518
 light_indirect_energy = 5.524
 shadow_enabled = true
 directional_shadow_max_distance = 115.0
@@ -1858,7 +1860,7 @@ directional_shadow_max_distance = 115.0
 [node name="Sun" type="DirectionalLight3D" parent="Sun" unique_id=509637917]
 transform = Transform3D(0.994522, -0.02511067, 0.1014675, 3.7252903e-09, 0.97071654, 0.24022803, -0.10452847, -0.23891206, 0.9653987, 169.72797, 40.28417, 119.61742)
 light_color = Color(0.69961256, 0.41748103, 0.5790356, 1)
-light_energy = 14.942
+light_energy = 3.744
 light_indirect_energy = 5.524
 shadow_enabled = true
 directional_shadow_max_distance = 115.0
@@ -1970,5 +1972,30 @@ transform = Transform3D(-0.9999763, 0, 0.0068785227, 0, 1, 0, -0.0068785227, 0, 
 [node name="DialogueComponent" parent="FatherDietrich/Components" parent_id_path=PackedInt32Array(1006532732, 385131821) index="0" unique_id=1414084883]
 speaker_name = "Priest"
 current_dialogue = SubResource("Resource_v2yk5")
+
+[node name="Skeleton3D" parent="FatherDietrich/Mesh/Armature" parent_id_path=PackedInt32Array(1006532732, 825735959) index="0" unique_id=517352831]
+bones/0/position = Vector3(1.1492884, -4.034999, -0.025190158)
+bones/1/rotation = Quaternion(9.0928955e-07, -0.03846465, 0.99925995, -3.5001243e-08)
+bones/2/position = Vector3(-1.1492884, -4.034999, -0.025190158)
+bones/4/position = Vector3(2.5008123, 1.5208447, -1.1961426)
+bones/5/position = Vector3(-2.5008123, 1.5208447, -1.1961426)
+bones/9/rotation = Quaternion(-0.041518237, 6.1123515e-06, -6.472802e-07, 0.99913776)
+bones/10/position = Vector3(8.915955e-09, 0.39764783, -0.037396915)
+bones/10/rotation = Quaternion(0.03220406, 1.9113134e-13, 7.678072e-09, 0.9994813)
+bones/12/position = Vector3(1.1333208, 0.9525497, -0.15028542)
+bones/12/rotation = Quaternion(0.3158572, 0.073542796, -0.93395376, 0.15018706)
+bones/13/rotation = Quaternion(0.2581543, -6.0836607e-09, -4.2170665e-08, 0.9661038)
+bones/16/position = Vector3(-1.1333207, 0.9525497, -0.15028599)
+bones/16/rotation = Quaternion(0.31585702, -0.07354313, 0.93395376, 0.15018724)
+bones/17/rotation = Quaternion(0.25815484, 5.984576e-09, 1.1109599e-08, 0.96610355)
+bones/20/rotation = Quaternion(-0.23885885, 0.015578164, 0.967055, -0.08665124)
+bones/21/rotation = Quaternion(-0.057615235, 0.00017344713, -0.050043207, 0.9970838)
+bones/22/rotation = Quaternion(0.15322362, 0.019897744, 0.9837768, 0.09115777)
+bones/23/rotation = Quaternion(-0.057615235, -0.00017344569, 0.0500432, 0.9970838)
+bones/26/position = Vector3(1.6428359, 0.38697314, 0.29629076)
+bones/27/position = Vector3(-1.6428359, 0.38697314, 0.29629076)
+
+[node name="RightHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" index="0" unique_id=1030682970]
+transform = Transform3D(-0.75535613, -0.056009267, 0.65291643, 0.19168678, -0.97164714, 0.13841058, 0.6266524, 0.22970474, 0.74467593, -1.6428375, 0.37106514, 0.16848755)
 
 [editable path="FatherDietrich"]

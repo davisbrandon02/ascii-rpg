@@ -2097,12 +2097,12 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": 0
 },
-"Talking": {
+"Swing": {
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://asset/animation/talking.anim",
+"save_to_file/fallback_path": "res://asset/animation/swing.anim",
 "save_to_file/keep_custom_tracks": "",
-"save_to_file/path": "uid://b2ltt273j1t1q",
-"settings/loop_mode": 2,
+"save_to_file/path": "uid://c7x6p0hlwt8qo",
+"settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",
