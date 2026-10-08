@@ -23,8 +23,11 @@ background_mode = 2
 sky = SubResource("Sky_u28oc")
 ssao_enabled = true
 sdfgi_enabled = true
-fog_enabled = true
 fog_light_color = Color(0.5873244, 0.4108548, 1, 1)
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.5
+volumetric_fog_albedo = Color(0.52186817, 0.2976359, 0.48766536, 1)
+volumetric_fog_sky_affect = 0.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hjh3l"]
 resource_name = "Material"
@@ -1948,11 +1951,11 @@ transform = Transform3D(0.21521388, 0.17641485, 2.1030289e-08, 0, -3.3173446e-08
 mesh = SubResource("ArrayMesh_2tlrn")
 
 [node name="Tree_016" type="MeshInstance3D" parent="env" unique_id=717580431]
-transform = Transform3D(0.21521388, 0.17641485, 2.1030289e-08, 0, -3.3173446e-08, 0.278279, 0.17641483, -0.21521388, -2.5655497e-08, -1.688489, 0.7839645, -6.568024)
+transform = Transform3D(0.21521388, 0.17641485, 2.1030289e-08, 0, -3.3173446e-08, 0.27827904, 0.17641483, -0.21521388, -2.5655499e-08, -1.688489, 0.6732383, -6.5680246)
 mesh = SubResource("ArrayMesh_stewk")
 
 [node name="Tree_017" type="MeshInstance3D" parent="env" unique_id=279523368]
-transform = Transform3D(0.21521388, 0.17641485, 2.1030289e-08, 0, -3.3173446e-08, 0.278279, 0.17641483, -0.21521388, -2.5655497e-08, -1.4994059, 0.6996326, -8.3857)
+transform = Transform3D(0.21521388, 0.17641485, 2.1030289e-08, 0, -3.3173446e-08, 0.27827904, 0.17641483, -0.21521388, -2.5655499e-08, -1.4994059, 0.65870357, -8.3857)
 mesh = SubResource("ArrayMesh_qdrau")
 
 [node name="Tree_018" type="MeshInstance3D" parent="env" unique_id=1414348992]
