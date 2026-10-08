@@ -1975,13 +1975,12 @@ speaker_name = "Priest"
 current_dialogue = SubResource("Resource_v2yk5")
 
 [node name="RightHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="0" unique_id=1030682970]
-transform = Transform3D(-0.7553562, -0.056009296, 0.6529164, 0.2354815, -0.95299023, 0.1906769, 0.61154366, 0.29777867, 0.73303616, -1.6428375, 0.38765478, 0.30055714)
+transform = Transform3D(-0.58264786, -0.10212666, 0.8062827, 0.38081867, -0.9107302, 0.15983632, 0.7179826, 0.40017563, 0.5695263, -1.8210678, 0.5132246, 0.7160883)
 
-[node name="SwordReference" parent="FatherDietrich/Mesh/Armature/Skeleton3D/RightHandAttachment" index="0" unique_id=195593448]
-surface_material_override/0 = null
+[node name="Node3D" type="Node3D" parent="FatherDietrich/Mesh/Armature/Skeleton3D/RightHandAttachment" index="1" unique_id=470691031]
 
 [node name="LeftHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="1" unique_id=613526629]
-transform = Transform3D(-0.7553563, 0.05600943, -0.6529162, -0.23548129, -0.95299023, 0.19067648, -0.6115436, 0.29777828, 0.7330366, 1.6428375, 0.3876543, 0.3005581)
+transform = Transform3D(-0.58264756, 0.10212703, -0.8062825, -0.38081872, -0.9107299, 0.15983579, -0.71798253, 0.4001754, 0.5695267, 1.8210602, 0.51322556, 0.7160883)
 
 [node name="TransitionArea" type="Area3D" parent="." unique_id=1164520900]
 collision_layer = 2
