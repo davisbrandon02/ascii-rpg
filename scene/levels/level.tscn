@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ahhq5gbswxh" path="res://scene/entity/player.tscn" id="6_qvpeq"]
 [ext_resource type="PackedScene" uid="uid://cjgtk5p23m4w6" path="res://scene/entity/npc.tscn" id="7_cq001"]
 [ext_resource type="Script" uid="uid://b1d2o7d8dp7m8" path="res://script/Dialogue.gd" id="8_htqai"]
+[ext_resource type="Script" uid="uid://vredqgt5hl2p" path="res://scene/logic/transition_area.gd" id="9_u28oc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_htqai"]
 sky_top_color = Color(0.6996383, 0.0009506786, 0.79390717, 1)
@@ -1973,29 +1974,15 @@ transform = Transform3D(-0.9999763, 0, 0.0068785227, 0, 1, 0, -0.0068785227, 0, 
 speaker_name = "Priest"
 current_dialogue = SubResource("Resource_v2yk5")
 
-[node name="Skeleton3D" parent="FatherDietrich/Mesh/Armature" parent_id_path=PackedInt32Array(1006532732, 825735959) index="0" unique_id=517352831]
-bones/0/position = Vector3(1.1492884, -4.034999, -0.025190158)
-bones/1/rotation = Quaternion(9.0928955e-07, -0.03846465, 0.99925995, -3.5001243e-08)
-bones/2/position = Vector3(-1.1492884, -4.034999, -0.025190158)
-bones/4/position = Vector3(2.5008123, 1.5208447, -1.1961426)
-bones/5/position = Vector3(-2.5008123, 1.5208447, -1.1961426)
-bones/9/rotation = Quaternion(-0.041518237, 6.1123515e-06, -6.472802e-07, 0.99913776)
-bones/10/position = Vector3(8.915955e-09, 0.39764783, -0.037396915)
-bones/10/rotation = Quaternion(0.03220406, 1.9113134e-13, 7.678072e-09, 0.9994813)
-bones/12/position = Vector3(1.1333208, 0.9525497, -0.15028542)
-bones/12/rotation = Quaternion(0.3158572, 0.073542796, -0.93395376, 0.15018706)
-bones/13/rotation = Quaternion(0.2581543, -6.0836607e-09, -4.2170665e-08, 0.9661038)
-bones/16/position = Vector3(-1.1333207, 0.9525497, -0.15028599)
-bones/16/rotation = Quaternion(0.31585702, -0.07354313, 0.93395376, 0.15018724)
-bones/17/rotation = Quaternion(0.25815484, 5.984576e-09, 1.1109599e-08, 0.96610355)
-bones/20/rotation = Quaternion(-0.23885885, 0.015578164, 0.967055, -0.08665124)
-bones/21/rotation = Quaternion(-0.057615235, 0.00017344713, -0.050043207, 0.9970838)
-bones/22/rotation = Quaternion(0.15322362, 0.019897744, 0.9837768, 0.09115777)
-bones/23/rotation = Quaternion(-0.057615235, -0.00017344569, 0.0500432, 0.9970838)
-bones/26/position = Vector3(1.6428359, 0.38697314, 0.29629076)
-bones/27/position = Vector3(-1.6428359, 0.38697314, 0.29629076)
+[node name="RightHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="0" unique_id=1030682970]
+transform = Transform3D(-0.7553562, -0.056009296, 0.6529164, 0.2354815, -0.95299023, 0.1906769, 0.61154366, 0.29777867, 0.73303616, -1.6428375, 0.38765478, 0.30055714)
 
-[node name="RightHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" index="0" unique_id=1030682970]
-transform = Transform3D(-0.75535613, -0.056009267, 0.65291643, 0.19168678, -0.97164714, 0.13841058, 0.6266524, 0.22970474, 0.74467593, -1.6428375, 0.37106514, 0.16848755)
+[node name="LeftHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="1" unique_id=613526629]
+transform = Transform3D(-0.7553563, 0.05600943, -0.6529162, -0.23548129, -0.95299023, 0.19067648, -0.6115436, 0.29777828, 0.7330366, 1.6428375, 0.3876543, 0.3005581)
+
+[node name="TransitionArea" type="Area3D" parent="." unique_id=1164520900]
+script = ExtResource("9_u28oc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TransitionArea" unique_id=927341508]
 
 [editable path="FatherDietrich"]

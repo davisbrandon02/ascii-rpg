@@ -17,7 +17,10 @@ extends CharacterBody3D
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_crouching: bool = false
 
+# Singleton so that its position can always be found easily by AI
+static var instance: Player
 func _ready() -> void:
+	instance = self
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://dbnrexk0kpbje" path="res://scene/entity/npc.gd" id="1_g6ei4"]
 [ext_resource type="Texture2D" uid="uid://ciqq2bt4ujw5d" path="res://asset/model/character/monk_body.png" id="2_ga2jp"]
 [ext_resource type="Script" uid="uid://kc20t32obvfo" path="res://script/components/dialogue_component.gd" id="2_r5jiv"]
+[ext_resource type="Script" uid="uid://ymefotd1nh3a" path="res://script/components/ai_component.gd" id="3_7lwt5"]
 [ext_resource type="Texture2D" uid="uid://codle44eh0dox" path="res://asset/model/character/man_head1.png" id="3_26h2l"]
 [ext_resource type="Texture2D" uid="uid://byt2r6ot44hwc" path="res://asset/textures/sword.png" id="3_ap7b2"]
 [ext_resource type="Animation" uid="uid://b2ltt273j1t1q" path="res://asset/animation/talking.anim" id="4_26h2l"]
+[ext_resource type="PackedScene" uid="uid://dxbfw8j8dluy2" path="res://scene/components/interactible_component.tscn" id="4_j5svs"]
 [ext_resource type="Animation" uid="uid://c7x6p0hlwt8qo" path="res://asset/animation/swing.anim" id="5_53f1s"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wj5hs"]
@@ -818,6 +820,9 @@ unique_name_in_owner = true
 script = ExtResource("2_r5jiv")
 
 [node name="AIComponent" type="Node" parent="Components" unique_id=788528174]
+script = ExtResource("3_7lwt5")
+
+[node name="InteractibleComponent" parent="Components" unique_id=2112980239 instance=ExtResource("4_j5svs")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1420656716]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5563812, 0)
