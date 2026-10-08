@@ -4,6 +4,11 @@ extends CharacterBody3D
 # An NPC is any character that can move around and do stuff that isn't the player
 # Some NPCs can have dialogue that can be initiated by walking up and pressing E
 
+# Which face the head mesh uses
+@export var face_to_use: Texture
+
+func _ready() -> void:
+	pass
 
 # This class is mostly used to get components
 func get_component(type):

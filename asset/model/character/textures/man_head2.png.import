@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brk6cw80pk3m6"
-path="res://.godot/imported/man_body_template.png-3be7a11315b2fefff59d36996fb8170c.ctex"
+uid="uid://dtsy3jshrvd7j"
+path="res://.godot/imported/man_head2.png-bfd5002317b64596c6ca4df75ebed526.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/model/character/man_body_template.png"
-dest_files=["res://.godot/imported/man_body_template.png-3be7a11315b2fefff59d36996fb8170c.ctex"]
+source_file="res://asset/model/character/textures/man_head2.png"
+dest_files=["res://.godot/imported/man_head2.png-bfd5002317b64596c6ca4df75ebed526.ctex"]
 
 [params]
 

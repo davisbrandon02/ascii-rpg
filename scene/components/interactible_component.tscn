@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dxbfw8j8dluy2"]
-
-[ext_resource type="Script" uid="uid://bhu83dtt0ceyu" path="res://scene/components/interactible_component.gd" id="1_cowho"]
-
-[node name="InteractibleComponent" type="Node" unique_id=2112980239]
-script = ExtResource("1_cowho")

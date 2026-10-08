@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dt31vrw3cfj8d"
-path="res://.godot/imported/human_stencilpaint_test.blend-b64d26f901c1f78243ae4af4870588fe.scn"
+uid="uid://dg2g07bsqs4mr"
+path="res://.godot/imported/lantern.blend-b84805d6f79c9323d088588d53dee78d.scn"
 
 [deps]
 
-source_file="res://asset/model/character/human_stencilpaint_test.blend"
-dest_files=["res://.godot/imported/human_stencilpaint_test.blend-b64d26f901c1f78243ae4af4870588fe.scn"]
+source_file="res://asset/model/object/lantern.blend"
+dest_files=["res://.godot/imported/lantern.blend-b84805d6f79c9323d088588d53dee78d.scn"]
 
 [params]
 

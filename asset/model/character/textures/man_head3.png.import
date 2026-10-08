@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7ig244clua3k"
-path.s3tc="res://.godot/imported/man_head3.png-aa6d0b137484280b99fdf541cae4e65d.s3tc.ctex"
+path.s3tc="res://.godot/imported/man_head3.png-059795153a35aeebb9cc32f7261905f8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://asset/model/character/man_head3.png"
-dest_files=["res://.godot/imported/man_head3.png-aa6d0b137484280b99fdf541cae4e65d.s3tc.ctex"]
+source_file="res://asset/model/character/textures/man_head3.png"
+dest_files=["res://.godot/imported/man_head3.png-059795153a35aeebb9cc32f7261905f8.s3tc.ctex"]
 
 [params]
 

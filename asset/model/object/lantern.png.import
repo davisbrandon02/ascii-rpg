@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://codle44eh0dox"
-path.s3tc="res://.godot/imported/man_head1.png-4a458bef51ef22a2a577980176ad3ba4.s3tc.ctex"
+uid="uid://d0kyypv5rksj0"
+path.s3tc="res://.godot/imported/lantern.png-6b4aee8144c2bee2481b58dd9e2bc73f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://asset/model/character/man_head1.png"
-dest_files=["res://.godot/imported/man_head1.png-4a458bef51ef22a2a577980176ad3ba4.s3tc.ctex"]
+source_file="res://asset/model/object/lantern.png"
+dest_files=["res://.godot/imported/lantern.png-6b4aee8144c2bee2481b58dd9e2bc73f.s3tc.ctex"]
 
 [params]
 

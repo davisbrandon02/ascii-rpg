@@ -1977,10 +1977,15 @@ current_dialogue = SubResource("Resource_v2yk5")
 [node name="RightHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="0" unique_id=1030682970]
 transform = Transform3D(-0.7553562, -0.056009296, 0.6529164, 0.2354815, -0.95299023, 0.1906769, 0.61154366, 0.29777867, 0.73303616, -1.6428375, 0.38765478, 0.30055714)
 
+[node name="SwordReference" parent="FatherDietrich/Mesh/Armature/Skeleton3D/RightHandAttachment" index="0" unique_id=195593448]
+surface_material_override/0 = null
+
 [node name="LeftHandAttachment" parent="FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="1" unique_id=613526629]
 transform = Transform3D(-0.7553563, 0.05600943, -0.6529162, -0.23548129, -0.95299023, 0.19067648, -0.6115436, 0.29777828, 0.7330366, 1.6428375, 0.3876543, 0.3005581)
 
 [node name="TransitionArea" type="Area3D" parent="." unique_id=1164520900]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("9_u28oc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TransitionArea" unique_id=927341508]
