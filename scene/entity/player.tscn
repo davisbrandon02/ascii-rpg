@@ -567,6 +567,8 @@ _data = {
 [node name="Player" type="CharacterBody3D" unique_id=876200602]
 script = ExtResource("1_25px6")
 
+[node name="InventoryComponent" type="Node" parent="." unique_id=1237635654]
+
 [node name="Model" type="Node3D" parent="." unique_id=1857574902]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
 
@@ -798,6 +800,7 @@ skin = SubResource("Skin_hv3k6")
 skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=873617504]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_v55ki")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1611179191]
