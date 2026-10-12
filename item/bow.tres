@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" format=3]
+
+[ext_resource type="Script" path="res://script/Item.gd" id="1_item"]
+[ext_resource type="Resource" path="res://item/arrows.tres" id="3_ammo"]
+
+[resource]
+script = ExtResource("1_item")
+display_name = "Bow"
+max_stack = 1
+ammo = ExtResource("3_ammo")
+hand = 2
+hold_animation = "Draw"
+use_animation = "Fire"

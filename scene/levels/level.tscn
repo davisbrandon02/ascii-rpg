@@ -1986,20 +1986,20 @@ transform = Transform3D(-0.58264786, -0.10212666, 0.8062827, 0.38081867, -0.9107
 [node name="LeftHandAttachment" parent="NPCs/FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1006532732, 517352831) index="1" unique_id=613526629]
 transform = Transform3D(-0.58264756, 0.10212703, -0.8062825, -0.38081872, -0.9107299, 0.15983579, -0.71798253, 0.4001754, 0.5695267, 1.8210602, 0.51322556, 0.7160883)
 
-[node name="FatherDietrich" parent="NPCs/FatherDietrich" unique_id=294719217 instance=ExtResource("7_cq001")]
-transform = Transform3D(0.869444, 0, 0.49403122, 0, 1, 0, -0.49403122, 0, 0.869444, -21.048557, -0.4019997, 7.5905914)
+[node name="FatherDietrich2" parent="NPCs" unique_id=1482398076 instance=ExtResource("7_cq001")]
+transform = Transform3D(-0.8112737, 0, -0.58466643, 0, 1, 0, 0.58466643, 0, -0.8112737, -5.298811, 1.975045, -10.35004)
 
-[node name="DialogueComponent" parent="NPCs/FatherDietrich/FatherDietrich/Components" parent_id_path=PackedInt32Array(294719217, 385131821) index="0" unique_id=1414084883]
+[node name="DialogueComponent" parent="NPCs/FatherDietrich2/Components" parent_id_path=PackedInt32Array(1482398076, 385131821) index="0" unique_id=1414084883]
 speaker_name = "Priest"
 current_dialogue = SubResource("Resource_v2yk5")
 
-[node name="RightHandAttachment" parent="NPCs/FatherDietrich/FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(294719217, 517352831) index="0" unique_id=1030682970]
-transform = Transform3D(-0.582648, -0.102126665, 0.80628276, 0.38081867, -0.9107302, 0.15983632, 0.7179827, 0.40017566, 0.5695263, -1.8210603, 0.5132246, 0.7160876)
+[node name="RightHandAttachment" parent="NPCs/FatherDietrich2/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1482398076, 517352831) index="0" unique_id=1030682970]
+transform = Transform3D(-0.58264786, -0.10212666, 0.8062827, 0.38081867, -0.9107302, 0.15983632, 0.7179826, 0.40017563, 0.5695263, -1.8210678, 0.5132246, 0.7160883)
 
-[node name="Node3D" type="Node3D" parent="NPCs/FatherDietrich/FatherDietrich/Mesh/Armature/Skeleton3D/RightHandAttachment" index="1" unique_id=1382027997]
+[node name="Node3D" type="Node3D" parent="NPCs/FatherDietrich2/Mesh/Armature/Skeleton3D/RightHandAttachment" index="1" unique_id=2052433255]
 
-[node name="LeftHandAttachment" parent="NPCs/FatherDietrich/FatherDietrich/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(294719217, 517352831) index="1" unique_id=613526629]
-transform = Transform3D(-0.5826477, 0.102127045, -0.80628264, -0.38081872, -0.9107299, 0.15983579, -0.7179826, 0.4001754, 0.56952673, 1.82106, 0.51322556, 0.71608794)
+[node name="LeftHandAttachment" parent="NPCs/FatherDietrich2/Mesh/Armature/Skeleton3D" parent_id_path=PackedInt32Array(1482398076, 517352831) index="1" unique_id=613526629]
+transform = Transform3D(-0.58264756, 0.10212703, -0.8062825, -0.38081872, -0.9107299, 0.15983579, -0.71798253, 0.4001754, 0.5695267, 1.8210602, 0.51322556, 0.7160883)
 
 [node name="TransitionArea" type="Area3D" parent="." unique_id=1164520900]
 collision_layer = 2
@@ -2009,4 +2009,4 @@ script = ExtResource("9_u28oc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TransitionArea" unique_id=927341508]
 
 [editable path="NPCs/FatherDietrich"]
-[editable path="NPCs/FatherDietrich/FatherDietrich"]
+[editable path="NPCs/FatherDietrich2"]

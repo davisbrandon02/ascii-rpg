@@ -4,13 +4,42 @@
 [ext_resource type="Texture2D" uid="uid://ciqq2bt4ujw5d" path="res://asset/model/character/textures/monk_body.png" id="2_e4vog"]
 [ext_resource type="AudioStream" uid="uid://bdm6rpb4queo3" path="res://asset/sound/footsteps_grass.mp3" id="2_n2tfw"]
 [ext_resource type="Script" uid="uid://yhuwtjs1o4t7" path="res://scene/entity/dialogue_ui.gd" id="3_xjd6f"]
-[ext_resource type="Animation" uid="uid://dajj5soeeo6g4" path="res://asset/animation/aim_crossbow.anim" id="4_afcu6"]
-[ext_resource type="Animation" uid="uid://c7l3l4gg0hxjf" path="res://asset/animation/draw_bow.anim" id="5_b75vp"]
-[ext_resource type="Animation" uid="uid://dmc8n7vc7o2q2" path="res://asset/animation/fire_bow.anim" id="6_oqae3"]
-[ext_resource type="Animation" uid="uid://domvmek3cmati" path="res://asset/animation/fire_crossbow.anim" id="7_xxje5"]
-[ext_resource type="Animation" uid="uid://dgsjwa20fsbyn" path="res://asset/animation/player_hold_left.anim" id="8_b75vp"]
-[ext_resource type="Animation" uid="uid://cva5g4dnsyv2w" path="res://asset/animation/swing_right.anim" id="8_rsjg5"]
-[ext_resource type="Animation" uid="uid://cjcgfcngg6efw" path="res://asset/animation/player_hold_right.anim" id="9_oqae3"]
+[ext_resource type="Animation" uid="uid://csogsg7pldetk" path="res://asset/animation/aim_crossbow.anim" id="4_afcu6"]
+[ext_resource type="Animation" uid="uid://cckm1kbf0a63i" path="res://asset/animation/draw_bow.anim" id="5_b75vp"]
+[ext_resource type="Animation" uid="uid://cu33o8pfg51fa" path="res://asset/animation/fire_bow.anim" id="6_oqae3"]
+[ext_resource type="Animation" uid="uid://164ikb3ai2tm" path="res://asset/animation/fire_crossbow.anim" id="7_xxje5"]
+[ext_resource type="Animation" uid="uid://be0ohy2k5uca7" path="res://asset/animation/player_hold_left.anim" id="8_b75vp"]
+[ext_resource type="Animation" uid="uid://bf158p4vgf0f4" path="res://asset/animation/swing_right.anim" id="8_rsjg5"]
+[ext_resource type="Animation" uid="uid://dsumxfebb4nxv" path="res://asset/animation/player_hold_right.anim" id="9_oqae3"]
+[ext_resource type="Script" uid="uid://b5w6ck0cryo5v" path="res://script/components/inventory_component.gd" id="inv_component"]
+[ext_resource type="Script" uid="uid://b2xbmmkqglvhk" path="res://scene/entity/inventory_ui.gd" id="inv_ui"]
+[ext_resource type="Resource" path="res://item/arrows.tres" id="item_arrows"]
+[ext_resource type="Resource" path="res://item/bow.tres" id="item_bow"]
+[ext_resource type="Resource" path="res://item/crossbow.tres" id="item_crossbow"]
+[ext_resource type="Script" uid="uid://03f86j3oh4ql" path="res://script/ItemStack.gd" id="item_stack"]
+[ext_resource type="Resource" path="res://item/sword.tres" id="item_sword"]
+[ext_resource type="Resource" path="res://item/torch.tres" id="item_torch"]
+
+[sub_resource type="Resource" id="ItemStack_crossbow"]
+script = ExtResource("item_stack")
+item = ExtResource("item_crossbow")
+
+[sub_resource type="Resource" id="ItemStack_bow"]
+script = ExtResource("item_stack")
+item = ExtResource("item_bow")
+
+[sub_resource type="Resource" id="ItemStack_arrows"]
+script = ExtResource("item_stack")
+item = ExtResource("item_arrows")
+count = 15
+
+[sub_resource type="Resource" id="ItemStack_torch"]
+script = ExtResource("item_stack")
+item = ExtResource("item_torch")
+
+[sub_resource type="Resource" id="ItemStack_sword"]
+script = ExtResource("item_stack")
+item = ExtResource("item_sword")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t1k4l"]
 resource_name = "Material.001"
@@ -568,14 +597,20 @@ _data = {
 script = ExtResource("1_25px6")
 
 [node name="InventoryComponent" type="Node" parent="." unique_id=1237635654]
+script = ExtResource("inv_component")
+starting_items = Array[ExtResource("item_stack")]([SubResource("ItemStack_crossbow"), SubResource("ItemStack_bow"), SubResource("ItemStack_arrows"), SubResource("ItemStack_torch"), SubResource("ItemStack_sword")])
 
-[node name="Model" type="Node3D" parent="." unique_id=1857574902]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1348027078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+current = true
 
-[node name="Armature" type="Node3D" parent="Model" unique_id=1072217335]
+[node name="Model" type="Node3D" parent="Camera3D" unique_id=1857574902]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, -0.8, 0)
+
+[node name="Armature" type="Node3D" parent="Camera3D/Model" unique_id=1072217335]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.0815073e-08, -0.007177651, -0.071624994)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Model/Armature" unique_id=130303686]
+[node name="Skeleton3D" type="Skeleton3D" parent="Camera3D/Model/Armature" unique_id=130303686]
 bones/0/name = "AnkleIK_L"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, -3.5762787e-07, 0.99999994, 0, -0.99999994, -3.5762787e-07, 1.1492884, -4.034999, -0.025190158)
@@ -773,42 +808,45 @@ bones/27/position = Vector3(-1.6428359, 0.38697314, 0.29629076)
 bones/27/rotation = Quaternion(0, 0, 0, 1)
 bones/27/scale = Vector3(1, 1, 1)
 
-[node name="RightHandBoneAttachment3D" type="BoneAttachment3D" parent="Model/Armature/Skeleton3D" unique_id=569399034]
+[node name="RightHandBoneAttachment3D" type="BoneAttachment3D" parent="Camera3D/Model/Armature/Skeleton3D" unique_id=569399034]
 transform = Transform3D(-0.7553562, -0.0560093, 0.65291643, 0.2340776, -0.95367104, 0.18899435, 0.61208236, 0.29559112, 0.73347193, -1.6428357, 0.38696992, 0.2962912)
 bone_name = "Hand_R"
 bone_idx = 18
 
-[node name="RightHandAttachPoint" type="Node3D" parent="Model/Armature/Skeleton3D/RightHandBoneAttachment3D" unique_id=1194893661]
+[node name="RightHandAttachPoint" type="Node3D" parent="Camera3D/Model/Armature/Skeleton3D/RightHandBoneAttachment3D" unique_id=1194893661]
+unique_name_in_owner = true
 
-[node name="LeftHandBoneAttachment3D" type="BoneAttachment3D" parent="Model/Armature/Skeleton3D" unique_id=1547586253]
-transform = Transform3D(-0.7553562, -0.0560093, 0.65291643, 0.2340776, -0.95367104, 0.18899435, 0.61208236, 0.29559112, 0.73347193, -1.6428357, 0.38696992, 0.2962912)
-bone_name = "Hand_R"
-bone_idx = 18
+[node name="LeftHandBoneAttachment3D" type="BoneAttachment3D" parent="Camera3D/Model/Armature/Skeleton3D" unique_id=1547586253]
+bone_name = "Hand_L"
+bone_idx = 14
 
-[node name="RightHandAttachPoint" type="Node3D" parent="Model/Armature/Skeleton3D/LeftHandBoneAttachment3D" unique_id=519298244]
+[node name="LeftHandAttachPoint" type="Node3D" parent="Camera3D/Model/Armature/Skeleton3D/LeftHandBoneAttachment3D" unique_id=519298244]
+unique_name_in_owner = true
 
-[node name="Cube_005" type="MeshInstance3D" parent="Model/Armature/Skeleton3D" unique_id=1292272621]
+[node name="RightArmMesh" type="MeshInstance3D" parent="Camera3D/Model/Armature/Skeleton3D" unique_id=1292272621]
+unique_name_in_owner = true
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_tuuhe")
 skin = SubResource("Skin_hv3k6")
 skeleton = NodePath("..")
 
-[node name="Cube_001" type="MeshInstance3D" parent="Model/Armature/Skeleton3D" unique_id=994914422]
+[node name="LeftArmMesh" type="MeshInstance3D" parent="Camera3D/Model/Armature/Skeleton3D" unique_id=994914422]
+unique_name_in_owner = true
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_sjy31")
 skin = SubResource("Skin_hv3k6")
 skeleton = NodePath("..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=873617504]
+[node name="RightArmAnimationPlayer" type="AnimationPlayer" parent="Camera3D/Model" unique_id=873617504]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_v55ki")
+
+[node name="LeftArmAnimationPlayer" type="AnimationPlayer" parent="Camera3D/Model" unique_id=873617505]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_v55ki")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1611179191]
 shape = SubResource("CapsuleShape3D_player")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1348027078]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
-current = true
 
 [node name="AudioStreams" type="Node3D" parent="." unique_id=1288086544]
 
@@ -959,3 +997,59 @@ offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Press E to interact"
+
+[node name="InventoryUI" type="Control" parent="CanvasLayer" unique_id=1408231577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("inv_ui")
+
+[node name="HotbarContainer" type="HBoxContainer" parent="CanvasLayer/InventoryUI" unique_id=1408231578]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = -90.0
+offset_right = 220.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+alignment = 1
+
+[node name="InventoryPanel" type="PanelContainer" parent="CanvasLayer/InventoryUI" unique_id=1408231579]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -135.0
+offset_right = 175.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryGrid" type="GridContainer" parent="CanvasLayer/InventoryUI/InventoryPanel" unique_id=1408231580]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 4
+
+[node name="SampleSlotBtn" type="Button" parent="CanvasLayer/InventoryUI/InventoryPanel/InventoryGrid" unique_id=1408231581]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+focus_mode = 0
+
+[node name="CursorLbl" type="Label" parent="CanvasLayer/InventoryUI" unique_id=1408231582]
+unique_name_in_owner = true
+layout_mode = 0

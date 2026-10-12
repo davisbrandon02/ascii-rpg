@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Item" format=3]
+
+[ext_resource type="Script" path="res://script/Item.gd" id="1_item"]
+[ext_resource type="PackedScene" uid="uid://bkxt5ysm6s3l2" path="res://asset/model/object/sword.blend" id="2_held"]
+
+[resource]
+script = ExtResource("1_item")
+display_name = "Sword"
+max_stack = 1
+held_scene = ExtResource("2_held")
+hold_animation = "player_hold_right"
+use_animation = "SwingRight"
